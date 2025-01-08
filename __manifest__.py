@@ -10,6 +10,7 @@
     'depends': ['project'],
     'data': [
         'views/project_view.xml',
+        'views/assets.xml', 
     ],
     'assets': {
         'web.assets_backend': [
@@ -18,7 +19,7 @@
             'project_gantt_view/static/src/xml/gantt_view.xml',
             'project_gantt_view/static/lib/dhtmlxgantt.js',
             'project_gantt_view/static/lib/dhtmlxgantt.css',
-            'views/assets.xml', 
+            
         ],
     },
     'qweb': [
