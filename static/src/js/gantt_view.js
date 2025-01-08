@@ -3,6 +3,7 @@ import { registry } from '@web/core/registry';
 import { useService } from "@web/core/utils/hooks";
 import { Component, onMounted, useState, useRef } from "@odoo/owl";
 import { loadJS } from "@web/core/assets";
+import { xml } from "@odoo/owl"; // Import xml
 
 export class GanttView extends Component {
     setup() {
@@ -48,4 +49,22 @@ export class GanttView extends Component {
 }
 
 GanttView.template = "project_gantt_view.GanttViewTemplate";
-registry.category("views").add("gantt_view", GanttView);
+registry.category("views").add("gantt_view_custom", { // Change here
+    ...GanttView,
+    type: "gantt_view_custom", // Add type
+    display_name: "Gantt View",
+    icon: "fa fa-tasks",
+    extractProps: ({ attrs }) => ({
+        ...attrs,
+    }),
+    // Define the template here
+    template: xml`
+        <t t-name="project_gantt_view.GanttViewTemplate">
+            <div class="gantt-view-container">
+                <div t-ref="gantt-container" class="gantt_container" style="width: 100%; height: 600px;"></div>
+                <div t-if="state.isLoading">Cargando...</div>
+                <div t-if="state.error" t-esc="state.error" class="error-message"/>
+            </div>
+        </t>
+    `,
+});

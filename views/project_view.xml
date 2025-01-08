@@ -4,7 +4,7 @@
             <field name="name">project.task.gantt.view</field>
             <field name="model">project.task</field>
             <field name="arch" type="xml">
-                 <gantt_view/>
+                 <gantt_view_custom/>
             </field>
         </record>
     </data>
