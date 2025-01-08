@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates>
+    <t t-name="project_gantt_view.GanttViewTemplate">
+       <div class="gantt-view-container">
+            <div t-ref="gantt-container" class="gantt_container" style="width: 100%; height: 600px;"></div>
+            <div t-if="state.isLoading">Cargando...</div>
+            <div t-if="state.error" t-esc="state.error" class="error-message"/>
+        </div>
+    </t>
+</templates>

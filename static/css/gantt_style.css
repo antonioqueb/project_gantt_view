@@ -1,0 +1,8 @@
+.gantt-view-container {
+    padding: 10px;
+  }
+  
+  .error-message {
+    color: red;
+    font-weight: bold;
+  }
