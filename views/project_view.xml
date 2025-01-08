@@ -1,13 +1,14 @@
 <odoo>
     <data>
         <!-- Vista de Gantt para las tareas -->
-        <record id="project_task_gantt_view" model="ir.ui.view">
-            <field name="name">project.task.gantt.view</field>
-            <field name="model">project.task</field>
-            <field name="arch" type="xml">
-                <div class="project_gantt_view_container"/>
-            </field>
-        </record>
+     <record id="project_task_gantt_view" model="ir.ui.view">
+        <field name="name">project.task.gantt.view</field>
+        <field name="model">project.task</field>
+        <field name="arch" type="xml">
+            <gantt class="project_gantt_view_container"/>
+        </field>
+     </record>
+
 
         <!-- Acción para la vista de Gantt -->
         <record id="action_project_task_view_gantt" model="ir.actions.act_window">
