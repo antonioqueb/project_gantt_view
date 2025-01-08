@@ -1,20 +1,11 @@
 <odoo>
-    <data>
-        <record id="assets_backend" model="ir.asset">
-            <field name="name">Gantt View Backend Assets</field>
-            <field name="bundle">web.assets_backend</field>
-            <field name="assets">
-                <value eval="[
-                    '/custom_gantt_view/static/src/js/gantt_view.js',
-                ]"/>
-                <value eval="[
-                    '/custom_gantt_view/static/css/gantt_style.css',
-                ]"/>
-                <value eval="[
-                    '/custom_gantt_view/static/src/xml/gantt_view.xml',
-                ]"/>
-            </field>
-            <field name="load" eval="True"/>
-        </record>
-    </data>
+    <template id="assets_frontend" name="mi_modulo_assets_frontend" inherit_id="web.assets_frontend">
+        <link rel="stylesheet" href="/my_module/static/src/css/styles.css"/>
+        <script type="text/javascript" src="/my_module/static/src/js/script.js"></script>
+    </template>
+
+    <template id="assets_backend" name="mi_modulo_assets_backend" inherit_id="web.assets_backend">
+        <link rel="stylesheet" href="/my_module/static/src/css/admin_styles.css"/>
+        <script type="text/javascript" src="/my_module/static/src/js/admin_script.js"></script>
+    </template>
 </odoo>
