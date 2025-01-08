@@ -1,24 +1,19 @@
 <odoo>
     <data>
-        <!-- Declaración de los assets para el backend -->
         <record id="assets_backend" model="ir.asset">
             <field name="name">Gantt View Backend Assets</field>
             <field name="bundle">web.assets_backend</field>
             <field name="assets">
-                <!-- Archivo JavaScript para la lógica de la vista -->
                 <value eval="[
                     '/custom_gantt_view/static/src/js/gantt_view.js',
                 ]"/>
-                <!-- Archivo CSS para estilos personalizados -->
                 <value eval="[
                     '/custom_gantt_view/static/css/gantt_style.css',
                 ]"/>
-                <!-- Archivo XML para plantillas frontend (opcional) -->
                 <value eval="[
                     '/custom_gantt_view/static/src/xml/gantt_view.xml',
                 ]"/>
             </field>
-            <!-- Módulo que depende de estos assets -->
             <field name="load" eval="True"/>
         </record>
     </data>

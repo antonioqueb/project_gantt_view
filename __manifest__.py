@@ -12,12 +12,15 @@
     ],
     'assets': {
         'web.assets_backend': [
-            'custom_gantt_view/static/src/js/gantt_view.js',
-            'custom_gantt_view/static/css/gantt_style.css',
+        'project_gantt_view/static/src/js/gantt_view.js',
+        'project_gantt_view/static/css/gantt_style.css',
+        'project_gantt_view/static/src/xml/gantt_view.xml',
+        'project_gantt_view/static/lib/dhtmlxgantt.js',
+        'project_gantt_view/static/lib/dhtmlxgantt.css',
         ],
     },
     'qweb': [
-        'custom_gantt_view/static/src/xml/gantt_view.xml',
+        'project_gantt_view/static/src/xml/gantt_view.xml',
     ],
     'installable': True,
     'auto_install': False,
