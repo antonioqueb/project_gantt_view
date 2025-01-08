@@ -1,16 +1,11 @@
 <odoo>
     <data>
-       <record id="project_task_gantt_view" model="ir.ui.view">
+        <record id="project_task_gantt_view" model="ir.ui.view">
             <field name="name">project.task.gantt.view</field>
             <field name="model">project.task</field>
             <field name="arch" type="xml">
                  <gantt_view/>
             </field>
         </record>
-        <record id="project_task_action" model="ir.actions.act_window">
-            <field name="name">Tareas</field>
-            <field name="res_model">project.task</field>
-            <field name="view_mode">tree,kanban,form,gantt_view</field>
-        </record>
-     </data>
- </odoo>
+    </data>
+</odoo>
