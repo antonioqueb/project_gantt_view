@@ -1,8 +1,21 @@
 .gantt-view-container {
+    position: relative;
     padding: 10px;
-  }
-  
-  .error-message {
-    color: red;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+}
+
+.gantt-task {
+    position: absolute;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 5px;
+    border-radius: 3px;
+    font-size: 12px;
+}
+
+.gantt-task-name {
     font-weight: bold;
-  }
+    font-size: 12px;
+}

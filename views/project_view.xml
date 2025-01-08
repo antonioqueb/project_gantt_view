@@ -1,12 +1,32 @@
 <odoo>
     <data>
+        <!-- Vista de Gantt para las tareas -->
         <record id="project_task_gantt_view" model="ir.ui.view">
             <field name="name">project.task.gantt.view</field>
             <field name="model">project.task</field>
-            <field name="type">xml</field> <!-- Corrected: type should be xml -->
             <field name="arch" type="xml">
-                 <gantt_view_custom/>
+                <div class="project_gantt_view_container"/>
             </field>
+        </record>
+
+        <!-- Acción para la vista de Gantt -->
+        <record id="action_project_task_view_gantt" model="ir.actions.act_window">
+            <field name="name">Gantt View</field>
+            <field name="res_model">project.task</field>
+            <field name="view_mode">gantt_view</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Crea nuevas tareas para el proyecto!
+                </p>
+            </field>
+        </record>
+
+        <!-- Menú para acceder a la vista de Gantt -->
+        <record model="ir.ui.menu" id="menu_action_project_task_view_gantt">
+            <field name="name">Tasks Gantt View</field>
+            <field name="active" eval="True"/>
+            <field name="action" ref="action_project_task_view_gantt"/>
+            <field name="parent_id" ref="project.menu_main_pm"/>
         </record>
     </data>
 </odoo>
