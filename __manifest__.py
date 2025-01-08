@@ -1,3 +1,4 @@
+# manifest.py
 {
     'name': 'Project Gantt View',
     'version': '1.0',
@@ -12,11 +13,11 @@
     ],
     'assets': {
         'web.assets_backend': [
-        'project_gantt_view/static/src/js/gantt_view.js',
-        'project_gantt_view/static/css/gantt_style.css',
-        'project_gantt_view/static/src/xml/gantt_view.xml',
-        'project_gantt_view/static/lib/dhtmlxgantt.js',
-        'project_gantt_view/static/lib/dhtmlxgantt.css',
+            'project_gantt_view/static/src/js/gantt_view.js',
+            'project_gantt_view/static/css/gantt_style.css',
+            'project_gantt_view/static/src/xml/gantt_view.xml',
+            'project_gantt_view/static/lib/dhtmlxgantt.js',
+            'project_gantt_view/static/lib/dhtmlxgantt.css',
         ],
     },
     'qweb': [

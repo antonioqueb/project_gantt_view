@@ -1,21 +1,41 @@
+/* static/src/css/gantt_style.css */
 .gantt-view-container {
     position: relative;
     padding: 10px;
     border: 1px solid #ccc;
     background-color: #f9f9f9;
+    font-family: sans-serif;
 }
 
-.gantt-task {
-    position: absolute;
-    background-color: #4CAF50;
-    color: white;
-    text-align: center;
-    padding: 5px;
-    border-radius: 3px;
+.gantt_task_line {
+    background-color: #4CAF50; /* Task bar background */
+    color: white; /* Task text color */
+    border-radius: 2px;
+}
+
+.gantt_task_content {
+    font-size: 12px;
+    font-weight: normal;
+    padding: 0px 5px;
+}
+
+.gantt_grid_scale{
     font-size: 12px;
 }
 
-.gantt-task-name {
+
+.gantt_task_progress_drag{
+    background-color: #6778ba;
+}
+.gantt_task_progress{
+    background-color: #8193db;
+}
+.gantt_drag_progress{
+    background-color: #b3c1f5;
+}
+
+.error-message {
+    color: red;
     font-weight: bold;
-    font-size: 12px;
+    margin-top: 10px;
 }

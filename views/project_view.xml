@@ -1,3 +1,4 @@
+# views/project_view.xml
 <odoo>
     <data>
         <!-- Vista de Gantt para las tareas -->
@@ -9,7 +10,6 @@
         </field>
      </record>
 
-
         <!-- Acción para la vista de Gantt -->
         <record id="action_project_task_view_gantt" model="ir.actions.act_window">
             <field name="name">Gantt View</field>
@@ -17,7 +17,7 @@
             <field name="view_mode">gantt_view</field>
             <field name="help" type="html">
                 <p class="o_view_nocontent_smiling_face">
-                    Crea nuevas tareas para el proyecto!
+                    Create new project tasks!
                 </p>
             </field>
         </record>
