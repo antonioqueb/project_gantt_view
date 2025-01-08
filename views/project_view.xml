@@ -3,6 +3,7 @@
         <record id="project_task_gantt_view" model="ir.ui.view">
             <field name="name">project.task.gantt.view</field>
             <field name="model">project.task</field>
+            <field name="type">xml</field> <!-- Corrected: type should be xml -->
             <field name="arch" type="xml">
                  <gantt_view_custom/>
             </field>
